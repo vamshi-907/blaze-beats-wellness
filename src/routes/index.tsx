@@ -346,7 +346,7 @@ function Reviews() {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Recent rating trend</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {Array.from({ length: 9 }).map((_, i) => (
-              <span key={i} className="inline-flex items-center gap-1 rounded-full bg-gradient-brand/20 ring-1 ring-white/10 px-3 py-1 text-sm font-semibold">
+              <span key={i} className="inline-flex items-center gap-1 rounded-full bg-pink/20 ring-1 ring-white/10 px-3 py-1 text-sm font-semibold">
                 5.0 <Star className="h-3 w-3 fill-gold text-gold" />
               </span>
             ))}
