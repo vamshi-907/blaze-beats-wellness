@@ -468,7 +468,7 @@ function Info({ icon: Icon, title, sub }: { icon: any; title: string; sub: strin
 function Footer() {
   return (
     <footer className="border-t border-border/60 py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid sm:grid-cols-[1.2fr_1fr_1fr] gap-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-[1.2fr_1fr_1fr] gap-8">
         <div>
           <div className="flex items-center gap-3">
             <img src={bbLogo.url} alt="" className="h-10 w-10 rounded-full bg-black/40 p-0.5" />
