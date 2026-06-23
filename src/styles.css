@@ -117,8 +117,6 @@
 
 @utility ring-gradient {
   position: relative;
-}
-@utility ring-gradient {
   &::before {
     content: "";
     position: absolute;
@@ -133,6 +131,7 @@
     pointer-events: none;
   }
 }
+
 
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 @keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
