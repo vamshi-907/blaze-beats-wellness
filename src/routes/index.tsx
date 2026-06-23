@@ -424,7 +424,7 @@ function CTA() {
           <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
           <div className="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
             <div>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Your first class is on us. <span className="text-gradient">Just show up.</span>
               </h2>
               <p className="mt-4 text-muted-foreground max-w-lg">
