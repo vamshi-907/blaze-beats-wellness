@@ -155,7 +155,6 @@
 }
 @utility tilt {
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
-}
-@utility tilt {
   &:hover { transform: rotateX(4deg) rotateY(-6deg) translateY(-6px); }
 }
+
