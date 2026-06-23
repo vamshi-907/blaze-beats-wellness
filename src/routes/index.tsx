@@ -308,7 +308,7 @@ function Transparency() {
         <div className="relative perspective-card">
           <div className="rounded-3xl ring-gradient glass p-8 tilt">
             <Quote className="h-8 w-8 text-pink" />
-            <p className="mt-4 font-display text-2xl sm:text-3xl leading-snug">
+            <p className="mt-4 font-display text-xl sm:text-2xl md:text-3xl leading-snug">
               "We don't promise <span className="text-gradient">10kg in 10 days.</span> We promise the truth — and a body you'll actually keep."
             </p>
             <div className="mt-6 flex items-center gap-3">
