@@ -91,63 +91,63 @@ function Nav() {
 /* ---------------- HERO ---------------- */
 function Hero() {
   return (
-    <section id="top" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="top" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28">
       <div className="absolute inset-0 -z-10">
         <img src={heroZumba} alt="" width={1600} height={1200} className="h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <Sparkles className="h-3 w-3 text-pink" /> Padmavathi Colony · Mahbubnagar
           </span>
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95]">
+          <h1 className="mt-5 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1] sm:leading-[0.95]">
             Move with <span className="text-gradient">Blaze.</span><br/>
             Transform with <span className="text-gradient">Truth.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground">
+          <p className="mt-5 sm:mt-6 max-w-xl text-sm sm:text-base lg:text-lg text-muted-foreground">
             Energetic Zumba, HIIT, Yoga & nutrition — engineered for real, transparent results.
             Specialised programs for <strong className="text-foreground">PCOD</strong>, <strong className="text-foreground">Thyroid</strong> and sustainable
             <strong className="text-foreground"> weight loss</strong>. We show you exactly what you lose — muscle, water or fat.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WA} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 font-semibold text-white shadow-glow hover:scale-105 transition">
+          <div className="mt-7 sm:mt-8 flex flex-wrap gap-3">
+            <a href={WA} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-5 sm:px-6 py-3 text-sm sm:text-base font-semibold text-white shadow-glow hover:scale-105 transition">
               Book your free trial <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
             </a>
-            <a href={TEL} className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 font-semibold hover:bg-white/10 transition">
+            <a href={TEL} className="inline-flex items-center gap-2 rounded-full glass px-5 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-white/10 transition">
               <Phone className="h-4 w-4" /> 93983 21142
             </a>
           </div>
-          <div className="mt-10 grid grid-cols-3 max-w-md gap-6">
+          <div className="mt-10 grid grid-cols-3 max-w-md gap-4 sm:gap-6">
             {[
               { k: "4.6★", v: "43 Reviews" },
               { k: "500+", v: "Active Members" },
               { k: "100%", v: "Transparent" },
             ].map((s) => (
               <div key={s.v}>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-gradient">{s.k}</p>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.v}</p>
+                <p className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">{s.k}</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.v}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative perspective-card">
+        <div className="relative perspective-card mx-auto w-full max-w-sm lg:max-w-none px-6 sm:px-10 lg:px-0">
           <div className="absolute -inset-8 rounded-full bg-gradient-radial blur-2xl" />
           <div className="relative animate-float">
             <div className="absolute inset-0 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-            <div className="relative aspect-square rounded-3xl ring-gradient glass p-6 tilt">
-              <div className="absolute inset-6 rounded-2xl overflow-hidden">
+            <div className="relative aspect-square rounded-3xl ring-gradient glass p-4 sm:p-6 tilt">
+              <div className="absolute inset-4 sm:inset-6 rounded-2xl overflow-hidden">
                 <img src={bbLogo.url} alt="Blaze Beats Zumba Studio logo" className="h-full w-full object-contain animate-spin-slow" style={{ animationDuration: "40s" }} />
               </div>
-              <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 shadow-glow">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Trusted on</p>
-                <p className="font-display font-bold">Justdial 2026</p>
+              <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 glass rounded-2xl p-3 sm:p-4 shadow-glow">
+                <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Trusted on</p>
+                <p className="font-display text-sm sm:text-base font-bold">Justdial 2026</p>
               </div>
-              <div className="absolute -top-6 -right-6 glass rounded-2xl p-4 shadow-pink flex items-center gap-2">
+              <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 glass rounded-2xl p-3 sm:p-4 shadow-pink flex items-center gap-2">
                 <Star className="h-4 w-4 fill-pink text-pink" />
-                <span className="font-semibold">Users' Choice</span>
+                <span className="text-sm sm:text-base font-semibold">Users' Choice</span>
               </div>
             </div>
           </div>
@@ -162,10 +162,10 @@ function Marquee() {
   const items = ["Zumba", "HIIT", "Yoga", "Dance Fitness", "Aerobics", "Nutrition", "Personal Training", "PCOD Care", "Thyroid Plans", "Weight Loss"];
   return (
     <div className="border-y border-border/60 bg-card/30 backdrop-blur overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap py-5">
+      <div className="flex animate-marquee whitespace-nowrap py-4 sm:py-5">
         {[...items, ...items, ...items].map((t, i) => (
-          <span key={i} className="mx-8 inline-flex items-center gap-3 font-display text-2xl sm:text-3xl font-bold">
-            <Flame className="h-5 w-5 text-pink" />
+          <span key={i} className="mx-5 sm:mx-8 inline-flex items-center gap-2 sm:gap-3 font-display text-lg sm:text-2xl md:text-3xl font-bold">
+            <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-pink" />
             <span className="text-gradient">{t}</span>
           </span>
         ))}
@@ -308,7 +308,7 @@ function Transparency() {
         <div className="relative perspective-card">
           <div className="rounded-3xl ring-gradient glass p-8 tilt">
             <Quote className="h-8 w-8 text-pink" />
-            <p className="mt-4 font-display text-2xl sm:text-3xl leading-snug">
+            <p className="mt-4 font-display text-xl sm:text-2xl md:text-3xl leading-snug">
               "We don't promise <span className="text-gradient">10kg in 10 days.</span> We promise the truth — and a body you'll actually keep."
             </p>
             <div className="mt-6 flex items-center gap-3">
@@ -424,7 +424,7 @@ function CTA() {
           <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
           <div className="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
             <div>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Your first class is on us. <span className="text-gradient">Just show up.</span>
               </h2>
               <p className="mt-4 text-muted-foreground max-w-lg">
@@ -468,7 +468,7 @@ function Info({ icon: Icon, title, sub }: { icon: any; title: string; sub: strin
 function Footer() {
   return (
     <footer className="border-t border-border/60 py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid sm:grid-cols-[1.2fr_1fr_1fr] gap-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-[1.2fr_1fr_1fr] gap-8">
         <div>
           <div className="flex items-center gap-3">
             <img src={bbLogo.url} alt="" className="h-10 w-10 rounded-full bg-black/40 p-0.5" />
@@ -478,7 +478,7 @@ function Footer() {
             </div>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Mahbubnagar's most trusted Zumba and transparent weight-loss studio. PCOD · Thyroid · Nutrition · Personal training.
+            Mahbubnagar's most trusted Zumba and transparent weight-loss studio.
           </p>
         </div>
         <div>
@@ -521,7 +521,7 @@ function SectionHead({ eyebrow, title, sub, align = "center" }: { eyebrow: strin
       <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
         <Sparkles className="h-3 w-3 text-pink" /> {eyebrow}
       </span>
-      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-tight">{title}</h2>
+      <h2 className="mt-4 sm:mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">{title}</h2>
       {sub && <p className="mt-4 text-muted-foreground">{sub}</p>}
     </div>
   );
