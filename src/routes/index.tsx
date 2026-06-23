@@ -91,63 +91,63 @@ function Nav() {
 /* ---------------- HERO ---------------- */
 function Hero() {
   return (
-    <section id="top" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="top" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28">
       <div className="absolute inset-0 -z-10">
         <img src={heroZumba} alt="" width={1600} height={1200} className="h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <Sparkles className="h-3 w-3 text-pink" /> Padmavathi Colony · Mahbubnagar
           </span>
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95]">
+          <h1 className="mt-5 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1] sm:leading-[0.95]">
             Move with <span className="text-gradient">Blaze.</span><br/>
             Transform with <span className="text-gradient">Truth.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground">
+          <p className="mt-5 sm:mt-6 max-w-xl text-sm sm:text-base lg:text-lg text-muted-foreground">
             Energetic Zumba, HIIT, Yoga & nutrition — engineered for real, transparent results.
             Specialised programs for <strong className="text-foreground">PCOD</strong>, <strong className="text-foreground">Thyroid</strong> and sustainable
             <strong className="text-foreground"> weight loss</strong>. We show you exactly what you lose — muscle, water or fat.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WA} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 font-semibold text-white shadow-glow hover:scale-105 transition">
+          <div className="mt-7 sm:mt-8 flex flex-wrap gap-3">
+            <a href={WA} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-5 sm:px-6 py-3 text-sm sm:text-base font-semibold text-white shadow-glow hover:scale-105 transition">
               Book your free trial <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
             </a>
-            <a href={TEL} className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 font-semibold hover:bg-white/10 transition">
+            <a href={TEL} className="inline-flex items-center gap-2 rounded-full glass px-5 sm:px-6 py-3 text-sm sm:text-base font-semibold hover:bg-white/10 transition">
               <Phone className="h-4 w-4" /> 93983 21142
             </a>
           </div>
-          <div className="mt-10 grid grid-cols-3 max-w-md gap-6">
+          <div className="mt-10 grid grid-cols-3 max-w-md gap-4 sm:gap-6">
             {[
               { k: "4.6★", v: "43 Reviews" },
               { k: "500+", v: "Active Members" },
               { k: "100%", v: "Transparent" },
             ].map((s) => (
               <div key={s.v}>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-gradient">{s.k}</p>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.v}</p>
+                <p className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">{s.k}</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider mt-1">{s.v}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative perspective-card">
+        <div className="relative perspective-card mx-auto w-full max-w-sm lg:max-w-none px-6 sm:px-10 lg:px-0">
           <div className="absolute -inset-8 rounded-full bg-gradient-radial blur-2xl" />
           <div className="relative animate-float">
             <div className="absolute inset-0 rounded-full bg-gradient-brand opacity-30 blur-3xl" />
-            <div className="relative aspect-square rounded-3xl ring-gradient glass p-6 tilt">
-              <div className="absolute inset-6 rounded-2xl overflow-hidden">
+            <div className="relative aspect-square rounded-3xl ring-gradient glass p-4 sm:p-6 tilt">
+              <div className="absolute inset-4 sm:inset-6 rounded-2xl overflow-hidden">
                 <img src={bbLogo.url} alt="Blaze Beats Zumba Studio logo" className="h-full w-full object-contain animate-spin-slow" style={{ animationDuration: "40s" }} />
               </div>
-              <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 shadow-glow">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Trusted on</p>
-                <p className="font-display font-bold">Justdial 2026</p>
+              <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 glass rounded-2xl p-3 sm:p-4 shadow-glow">
+                <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Trusted on</p>
+                <p className="font-display text-sm sm:text-base font-bold">Justdial 2026</p>
               </div>
-              <div className="absolute -top-6 -right-6 glass rounded-2xl p-4 shadow-pink flex items-center gap-2">
+              <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 glass rounded-2xl p-3 sm:p-4 shadow-pink flex items-center gap-2">
                 <Star className="h-4 w-4 fill-pink text-pink" />
-                <span className="font-semibold">Users' Choice</span>
+                <span className="text-sm sm:text-base font-semibold">Users' Choice</span>
               </div>
             </div>
           </div>
