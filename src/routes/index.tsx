@@ -478,7 +478,7 @@ function Footer() {
             </div>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Mahbubnagar's most trusted Zumba and transparent weight-loss studio. PCOD · Thyroid · Nutrition · Personal training.
+            Mahbubnagar's most trusted Zumba and transparent weight-loss studio.
           </p>
         </div>
         <div>
