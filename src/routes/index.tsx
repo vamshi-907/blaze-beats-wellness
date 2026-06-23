@@ -521,7 +521,7 @@ function SectionHead({ eyebrow, title, sub, align = "center" }: { eyebrow: strin
       <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
         <Sparkles className="h-3 w-3 text-pink" /> {eyebrow}
       </span>
-      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-tight">{title}</h2>
+      <h2 className="mt-4 sm:mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">{title}</h2>
       {sub && <p className="mt-4 text-muted-foreground">{sub}</p>}
     </div>
   );
