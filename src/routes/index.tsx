@@ -162,10 +162,10 @@ function Marquee() {
   const items = ["Zumba", "HIIT", "Yoga", "Dance Fitness", "Aerobics", "Nutrition", "Personal Training", "PCOD Care", "Thyroid Plans", "Weight Loss"];
   return (
     <div className="border-y border-border/60 bg-card/30 backdrop-blur overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap py-5">
+      <div className="flex animate-marquee whitespace-nowrap py-4 sm:py-5">
         {[...items, ...items, ...items].map((t, i) => (
-          <span key={i} className="mx-8 inline-flex items-center gap-3 font-display text-2xl sm:text-3xl font-bold">
-            <Flame className="h-5 w-5 text-pink" />
+          <span key={i} className="mx-5 sm:mx-8 inline-flex items-center gap-2 sm:gap-3 font-display text-lg sm:text-2xl md:text-3xl font-bold">
+            <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-pink" />
             <span className="text-gradient">{t}</span>
           </span>
         ))}
