@@ -495,7 +495,7 @@ function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             <li><a href={TEL} className="hover:text-pink transition">+91 93983 21142</a></li>
             <li><a href={WA} target="_blank" rel="noreferrer" className="hover:text-pink transition">WhatsApp</a></li>
-            <li className="flex items-center gap-2 text-muted-foreground"><Instagram className="h-4 w-4" /> @blazebeatsstudio</li>
+            <li><a href="https://www.instagram.com/mbnr_zumba" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-pink transition"><Instagram className="h-4 w-4" /> @mbnr_zumba</a></li>
           </ul>
         </div>
       </div>
