@@ -212,11 +212,11 @@ function About() {
         <div className="relative perspective-card order-2 lg:order-1">
           <div className="absolute -inset-6 bg-gradient-brand opacity-20 blur-3xl rounded-full" />
           <div className="relative grid grid-cols-2 gap-4">
-            <div className="rounded-3xl overflow-hidden ring-gradient tilt">
-              <img src={trainer.url} alt="D. Prashanth — Certified Zumba instructor and nutritionist" loading="lazy" className="w-full aspect-[3/4] object-cover" />
+            <div className="rounded-3xl overflow-hidden ring-gradient tilt isolate">
+              <img src={trainer.url} alt="D. Prashanth — Certified Zumba instructor and nutritionist" loading="lazy" className="w-full aspect-[3/4] object-cover rounded-3xl" />
             </div>
-            <div className="rounded-3xl overflow-hidden ring-gradient tilt mt-10">
-              <img src={trainerAction.url} alt="Trainer with sound system at outdoor session" loading="lazy" className="w-full aspect-[3/4] object-cover" />
+            <div className="rounded-3xl overflow-hidden ring-gradient tilt isolate mt-10">
+              <img src={trainerAction.url} alt="Trainer with sound system at outdoor session" loading="lazy" className="w-full aspect-[3/4] object-cover rounded-3xl" />
             </div>
           </div>
         </div>
