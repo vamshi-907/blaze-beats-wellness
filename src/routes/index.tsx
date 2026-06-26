@@ -432,14 +432,66 @@ function Reviews() {
           </div>
         </div>
 
-        <div className="mt-10">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Video testimonials</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src, i) => (
-              <HoverVideoCard key={src} src={src} index={i} />
-            ))}
+        <div className="mt-16 relative">
+          {/* ambient glow */}
+          <div aria-hidden className="pointer-events-none absolute -inset-x-6 -top-10 -bottom-10 -z-10 overflow-hidden">
+            <div className="absolute left-1/4 top-0 h-72 w-72 rounded-full bg-pink/20 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+            <div className="absolute right-1/4 bottom-0 h-80 w-80 rounded-full bg-purple/25 blur-3xl animate-[float_10s_ease-in-out_infinite_reverse]" />
+            <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue/15 blur-3xl" />
+          </div>
+
+          {/* heading bar */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full glass ring-gradient px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-pink opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-pink" />
+                </span>
+                Caught on camera
+              </div>
+              <h3 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
+                Watch them <span className="text-gradient">move &amp; smile</span>
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground max-w-md">Hover any card — the story plays itself. Tap on mobile.</p>
+            </div>
+            <div className="hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
+              <span className="h-px w-10 bg-gradient-to-r from-transparent to-pink/60" />
+              Hover to play
+              <span className="h-px w-10 bg-gradient-to-l from-transparent to-purple/60" />
+            </div>
+          </div>
+
+          {/* film-strip frame */}
+          <div className="relative rounded-[2rem] glass ring-gradient p-4 sm:p-6 overflow-hidden">
+            {/* perforations top */}
+            <div aria-hidden className="absolute inset-x-0 top-0 h-3 flex gap-2 px-3">
+              {Array.from({ length: 28 }).map((_, i) => (
+                <span key={i} className="mt-1 h-1.5 flex-1 rounded-sm bg-white/10" />
+              ))}
+            </div>
+            <div aria-hidden className="absolute inset-x-0 bottom-0 h-3 flex gap-2 px-3">
+              {Array.from({ length: 28 }).map((_, i) => (
+                <span key={i} className="mb-1 mt-auto h-1.5 flex-1 rounded-sm bg-white/10" />
+              ))}
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 py-3">
+              {[testimonial1.url, testimonial2.url, testimonial3.url].map((src, i) => (
+                <HoverVideoCard key={src} src={src} index={i} />
+              ))}
+            </div>
+          </div>
+
+          {/* footer caption */}
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5"><Star className="h-3.5 w-3.5 fill-gold text-gold" /> Real members</span>
+            <span className="inline-flex items-center gap-1.5"><Flame className="h-3.5 w-3.5 text-pink" /> Real sweat</span>
+            <span className="inline-flex items-center gap-1.5"><HeartPulse className="h-3.5 w-3.5 text-purple" /> Real results</span>
           </div>
         </div>
+
+
 
 
 
