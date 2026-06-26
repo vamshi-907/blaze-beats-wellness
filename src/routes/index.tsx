@@ -328,6 +328,74 @@ function Transparency() {
   );
 }
 
+/* ---------------- HOVER VIDEO CARD ---------------- */
+function HoverVideoCard({ src, index }: { src: string; index: number }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const play = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.currentTime = 0;
+    v.play().then(() => setPlaying(true)).catch(() => {});
+  };
+  const stop = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.pause();
+    v.currentTime = 0;
+    setPlaying(false);
+  };
+
+  return (
+    <div
+      className="group relative rounded-3xl glass ring-gradient p-2 overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_20px_60px_-15px_rgba(236,72,153,0.5)] animate-fade-in"
+      style={{ animationDelay: `${index * 120}ms` }}
+      onMouseEnter={play}
+      onMouseLeave={stop}
+      onFocus={play}
+      onBlur={stop}
+      onTouchStart={() => (playing ? stop() : play())}
+      tabIndex={0}
+    >
+      <div className="relative overflow-hidden rounded-2xl">
+        <video
+          ref={ref}
+          src={src}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="w-full aspect-[9/16] bg-black object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        {/* gradient overlay */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-40" />
+        {/* play icon */}
+        <div
+          className={`pointer-events-none absolute inset-0 grid place-items-center transition-all duration-500 ${
+            playing ? "opacity-0 scale-50" : "opacity-100 scale-100"
+          }`}
+        >
+          <div className="grid h-16 w-16 place-items-center rounded-full bg-white/15 ring-1 ring-white/40 backdrop-blur-md transition-transform duration-500 group-hover:scale-110">
+            <svg viewBox="0 0 24 24" className="h-7 w-7 translate-x-0.5 fill-white">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        {/* label */}
+        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
+          <span className="rounded-full bg-black/50 px-3 py-1 font-semibold text-white backdrop-blur-md ring-1 ring-white/20">
+            Member story #{index + 1}
+          </span>
+          <span className={`flex items-center gap-1 rounded-full bg-pink/80 px-2.5 py-1 font-semibold text-white transition-opacity duration-300 ${playing ? "opacity-100" : "opacity-0"}`}>
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" /> LIVE
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------------- REVIEWS ---------------- */
 function Reviews() {
   const quotes = [
@@ -367,19 +435,12 @@ function Reviews() {
         <div className="mt-10">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Video testimonials</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src) => (
-              <div key={src} className="rounded-3xl glass ring-gradient p-2 overflow-hidden">
-                <video
-                  src={src}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-[9/16] rounded-2xl bg-black object-cover"
-                />
-              </div>
+            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src, i) => (
+              <HoverVideoCard key={src} src={src} index={i} />
             ))}
           </div>
         </div>
+
 
 
 
