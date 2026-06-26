@@ -367,19 +367,12 @@ function Reviews() {
         <div className="mt-10">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Video testimonials</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src) => (
-              <div key={src} className="rounded-3xl glass ring-gradient p-2 overflow-hidden">
-                <video
-                  src={src}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-[9/16] rounded-2xl bg-black object-cover"
-                />
-              </div>
+            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src, i) => (
+              <HoverVideoCard key={src} src={src} index={i} />
             ))}
           </div>
         </div>
+
 
 
 
