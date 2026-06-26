@@ -14,6 +14,9 @@ import reviewsTrend from "@/assets/reviews-trend.png.asset.json";
 import reviewVijaya from "@/assets/review-vijaya.png.asset.json";
 import reviewEndira from "@/assets/review-endira.png.asset.json";
 import reviewRani from "@/assets/review-rani.png.asset.json";
+import testimonial1 from "@/assets/testimonial-1.mp4.asset.json";
+import testimonial2 from "@/assets/testimonial-2.mp4.asset.json";
+import testimonial3 from "@/assets/testimonial-3.mp4.asset.json";
 import heroZumba from "@/assets/hero-zumba.jpg";
 import transparencyArt from "@/assets/transparency-art.jpg";
 
@@ -360,6 +363,25 @@ function Reviews() {
             ))}
           </div>
         </div>
+
+        <div className="mt-10">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Video testimonials</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[testimonial1.url, testimonial2.url, testimonial3.url].map((src) => (
+              <div key={src} className="rounded-3xl glass ring-gradient p-2 overflow-hidden">
+                <video
+                  src={src}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full aspect-[9/16] rounded-2xl bg-black object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+
 
         <div className="mt-8 grid lg:grid-cols-3 gap-5">
           {quotes.map((q) => (
